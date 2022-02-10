@@ -6,10 +6,10 @@ import {
   StatisticsElem,
 } from '../Statistics/Statistics.styled';
 
-export default function Statistics({ data }) {
+export default function Statistics({ title, data }) {
   return (
     <StatisticsBox>
-      <StatisticsTitle>Upload stats</StatisticsTitle>
+      {title && <StatisticsTitle>{title}</StatisticsTitle>}
       <StatisticsList>
         {data.map(e => (
           <StatisticsElem key={e.id}>
